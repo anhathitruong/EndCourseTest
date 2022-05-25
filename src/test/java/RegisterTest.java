@@ -10,16 +10,16 @@ public class RegisterTest extends BaseTest {
     public void SignUpAccount() {
 
 
-        webDriver.get("http://tutorialsninja.com/demo/index.php?route=account/register");
+        driver.get("http://tutorialsninja.com/demo/index.php?route=account/register");
 
-        WebElement firstname = webDriver.findElement(By.id("input-firstname"));
-        WebElement lastname = webDriver.findElement(By.id("input-lastname"));
-        WebElement email = webDriver.findElement(By.id("input-email"));
-        WebElement telephone = webDriver.findElement(By.id("input-telephone"));
-        WebElement password = webDriver.findElement(By.id("input-password"));
-        WebElement passwordconfirm = webDriver.findElement(By.id("input-confirm"));
-        WebElement agree = webDriver.findElement(By.name("agree"));
-        WebElement submit = webDriver.findElement(By.xpath("//input[@value='Continue']"));
+        WebElement firstname = driver.findElement(By.id("input-firstname"));
+        WebElement lastname = driver.findElement(By.id("input-lastname"));
+        WebElement email = driver.findElement(By.id("input-email"));
+        WebElement telephone = driver.findElement(By.id("input-telephone"));
+        WebElement password = driver.findElement(By.id("input-password"));
+        WebElement passwordconfirm = driver.findElement(By.id("input-confirm"));
+        WebElement agree = driver.findElement(By.name("agree"));
+        WebElement submit = driver.findElement(By.xpath("//input[@value='Continue']"));
         firstname.sendKeys("summer");
         lastname.sendKeys("truong");
         email.sendKeys("summertruong@gmail.com");
@@ -28,6 +28,7 @@ public class RegisterTest extends BaseTest {
         passwordconfirm.sendKeys("123456");
         agree.click();
         submit.click();
+
 
 
     }

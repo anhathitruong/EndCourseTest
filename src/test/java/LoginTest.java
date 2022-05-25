@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
+
 public class LoginTest extends BaseTest {
 
     @Test
@@ -11,14 +12,14 @@ public class LoginTest extends BaseTest {
     public void VerifyLoginValidAccount () {
 
 
-        webDriver.get("http://tutorialsninja.com/demo/index.php?route=account/login");
+        driver.get("http://tutorialsninja.com/demo/index.php?route=account/login");
 
 
-        WebElement email = webDriver.findElement(By.id("input-email"));
+        WebElement email = driver.findElement(By.id("input-email"));
 
-        WebElement password = webDriver.findElement(By.id("input-password"));
+        WebElement password = driver.findElement(By.id("input-password"));
 
-        WebElement submit = webDriver.findElement(By.xpath("//input[@value='Login']"));
+        WebElement submit = driver.findElement(By.xpath("//input[@value='Login']"));
 
         email.sendKeys("summertruong@gmail.com");
 
@@ -26,8 +27,10 @@ public class LoginTest extends BaseTest {
 
         submit.click();
 
+
+
         String expectedURL = "http://tutorialsninja.com/demo/index.php?route=account/account";
-        String actualURL = webDriver.getCurrentUrl();
+        String actualURL = driver.getCurrentUrl();
         Assert.assertEquals(actualURL, expectedURL);
 
 
